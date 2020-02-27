@@ -22,7 +22,7 @@ end
 
 def directors_totals(nds)
   nds.each do |d|
-    
+    return d 
   result = {}
  
   grand_totals = {}
