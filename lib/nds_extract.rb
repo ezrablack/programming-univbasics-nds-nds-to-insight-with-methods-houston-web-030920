@@ -21,7 +21,7 @@ end
 #______________________________________________________#
 
 def directors_totals(nds)
-  all_directors = nds
+  nds.each 
   result = {}
  
   grand_totals = {}
