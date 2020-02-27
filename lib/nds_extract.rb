@@ -26,10 +26,11 @@ def directors_totals(nds)
   nds.each do |d|
     director_gross = 0 
     while director_gross < d.count do
-      director = d[0] 
+      director = d[:name] 
       total_gross = gross_for_director(d)
       director_gross += 1
     end
+    grand_totals[director] = total_gross
   end    
   return grand_totals
 end
