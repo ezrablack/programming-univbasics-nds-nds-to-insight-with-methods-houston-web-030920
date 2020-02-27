@@ -21,22 +21,21 @@ end
 #______________________________________________________#
 
 def directors_totals(nds)
-  nds.each do |d|
-    return d 
-  result = {}
- 
   grand_totals = {}
-  directors = 0 
-    while directors < all_directors.count do
-      worldwide_gross = 0 
-      movie_counter = 0
-      while movie_counter < all_directors[directors][:movies].count do
-        worldwide_gross += gross_for_director(all_directors)
-        movie_counter += 1 
+  
+  nds.each do |d|
+     
+    directors = 0 
+      while directors < all_directors.count do
+        worldwide_gross = 0 
+        movie_counter = 0
+        while movie_counter < all_directors[directors][:movies].count do
+          worldwide_gross += gross_for_director(all_directors)
+          movie_counter += 1 
+        end
+        directors += 1
       end
-      directors += 1
-    end
-    return grand_totals
+      return grand_totals
 end
 
 
