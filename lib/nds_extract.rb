@@ -21,7 +21,8 @@ end
 #______________________________________________________#
 
 def directors_totals(nds)
-  nds.each 
+  nds.each do |d|
+    
   result = {}
  
   grand_totals = {}
